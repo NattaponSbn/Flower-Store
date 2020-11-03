@@ -34,6 +34,9 @@ samples, guidance on mobile development, and a full API reference.
 
 ###กรอกอีเมลเเละรหัสผ่านเพื่อทำการสมัครสมาชิก
 
+##คู่มือใช้งาน
+https://youtu.be/J1mWeCkvnc4
+
 ##หน้าที่ 4 หน้าเพิ่มสินค้า
 
 ![additem](https://user-images.githubusercontent.com/55925378/97944546-8efb8100-1db7-11eb-8234-085688643b6f.PNG)
