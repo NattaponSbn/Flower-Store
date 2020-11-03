@@ -40,6 +40,7 @@ class _State extends State<LoginPage> {
                   padding: EdgeInsets.all(10),
                   child: TextField(
                     controller: nameController,
+                    style: TextStyle(color: Color(0xFFFFFFFF)),
                     decoration: InputDecoration(
                       focusedBorder: OutlineInputBorder(
                         borderSide:
@@ -63,6 +64,7 @@ class _State extends State<LoginPage> {
                   padding: EdgeInsets.fromLTRB(10, 10, 10, 0),
                   child: TextField(
                     obscureText: true,
+                    style: TextStyle(color: Color(0xFFFFFFFF)),
                     controller: passwordController,
                     decoration: InputDecoration(
                       focusedBorder: OutlineInputBorder(

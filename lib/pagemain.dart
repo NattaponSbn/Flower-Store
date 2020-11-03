@@ -17,9 +17,11 @@ class IndexState extends State<Index> {
           body: Center(
               child: ListView(children: <Widget>[
             Container(
-              width: 500,
-              height: 500,
-              child: Image.asset('images/unicorn.png'),
+              padding: EdgeInsets.fromLTRB(80, 5, 80, 0),
+              width: 400,
+              height: 350,
+              child: Image.asset(
+                  'images/Cream and Brown Natural Makeup Beauty Logo.jpg'),
             ),
             Container(
                 height: 60,
@@ -70,7 +72,7 @@ class IndexState extends State<Index> {
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(50)),
                   textColor: Colors.white,
-                  color: Colors.green[700],
+                  color: Colors.amber[700],
                   child: Text(
                     'ต้องการขายของ',
                     style: TextStyle(

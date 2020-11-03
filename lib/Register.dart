@@ -41,7 +41,9 @@ class _State extends State<RegiterPage> {
                     style: TextStyle(color: Color(0xFFFFFFFF)),
                     controller: username,
                     decoration: InputDecoration(
-                      border: OutlineInputBorder(),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(20),
+                      ),
                       labelText: 'ชื่อผู้ใช้',
                       labelStyle: TextStyle(color: Colors.white),
                     ),
@@ -54,7 +56,9 @@ class _State extends State<RegiterPage> {
                     style: TextStyle(color: Color(0xFFFFFFFF)),
                     controller: password,
                     decoration: InputDecoration(
-                      border: OutlineInputBorder(),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(20),
+                      ),
                       labelText: 'รหัสผ่าน',
                       labelStyle: TextStyle(color: Colors.white),
                     ),
@@ -65,6 +69,7 @@ class _State extends State<RegiterPage> {
                   child: TextField(
                     obscureText: true,
                     controller: cpassword,
+                    style: TextStyle(color: Color(0xFFFFFFFF)),
                     decoration: InputDecoration(
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(20),

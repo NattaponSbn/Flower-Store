@@ -1,9 +1,13 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_storage/firebase_storage.dart' as firebase_storage;
+import 'package:flutter/rendering.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:flutter/material.dart';
 import 'detail.dart';
 import 'pagemain.dart';
 import 'Account.dart';
+import 'grid.dart' as grid;
 
 class Home extends StatefulWidget {
   @override
@@ -47,29 +51,43 @@ class _HomeState extends State<Home> {
               itemBuilder: (context, index) {
                 DocumentSnapshot catalog = snapshot.data.docs[index];
                 return Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: EdgeInsets.fromLTRB(110, 10, 110, 0),
                     child: Card(
                         child: Container(
                             child: InkWell(
-                                onTap: () {
-                                  Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) => Detail(
-                                                pdid: catalog.id,
-                                                pdname: catalog['nameitem'],
-                                                pddescription:
-                                                    catalog['description'],
-                                                pirice: catalog['pirice'],
-                                              )));
-                                },
-                                child: Column(children: <Widget>[
-                                  ListTile(
-                                    // leading: Image.network(catalog['img']),
-                                    title: Text(catalog['nameitem']),
-                                    subtitle: Text(catalog['description']),
-                                  ),
-                                ])))));
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Detail(
+                                      pdid: catalog.id,
+                                      pdname: catalog['nameitem'],
+                                      pddescription: catalog['description'],
+                                      store: catalog['store'],
+                                      phone: catalog['phone'],
+                                      image: catalog['image'],
+                                    )));
+                      },
+                      child: Wrap(
+                          alignment: WrapAlignment.center,
+                          spacing: 10,
+                          children: <Widget>[
+                            Image.network(
+                              catalog['image'],
+                              width: 100,
+                              height: 100,
+                              fit: BoxFit.fill,
+                            ),
+                            Center(
+                              child: ListTile(
+                                title: Text(
+                                  catalog['nameitem'],
+                                ),
+                                subtitle: Text(catalog['description']),
+                              ),
+                            ),
+                          ]),
+                    ))));
               },
             );
           },
@@ -95,5 +113,28 @@ class _HomeState extends State<Home> {
     Navigator.push(context, MaterialPageRoute(builder: (context) {
       return Account();
     }));
+  }
+}
+
+class AppDrawer extends StatefulWidget {
+  @override
+  _AppDrawerState createState() => new _AppDrawerState();
+}
+
+class _AppDrawerState extends State<AppDrawer> {
+  @override
+  Widget build(BuildContext context) {
+    return new Drawer(
+      child: new ListView(
+        children: <Widget>[
+          new DrawerHeader(
+            child: new Text("Header"),
+          ),
+          new ListTile(
+            title: new Text("Item 1"),
+          ),
+        ],
+      ),
+    );
   }
 }
