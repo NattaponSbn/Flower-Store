@@ -15,12 +15,12 @@ For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 
-#### Flower-Store
-### หน้า 1 หน้าก่อนเข้าสู่ระบบเเละสมัครสมาชิก
+# Flower-Store
+## หน้า 1 หน้าก่อนเข้าสู่ระบบเเละสมัครสมาชิก
 
 ![main](https://user-images.githubusercontent.com/55925378/97940512-4394a300-1db6-11eb-8451-472b0ba20c32.PNG)
 
-## มีปุ่มให้เลือก 3 ปู่ม คือ เข้าสู่ระบบ สมัครสมาชิกเเละเพิ่มสินค้า
+##มีปุ่มให้เลือก 3 ปู่ม คือ เข้าสู่ระบบ สมัครสมาชิกเเละเพิ่มสินค้า
 
 ### หน้า 2 หน้าเข้าสู่ระบบ
 
